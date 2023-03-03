@@ -33,7 +33,7 @@ public class BankService {
      * @param amount the amount to be withdrawn.
      */
     public void withdraw(double amount){
-        if (this.balance >= amount){
+        if (this.balance >= amount){ // this.balance > 0 would not go pass test, I assume it is due to the fact that amount could still push the balance into negatives
            this.balance -= amount;
         }    
         System.out.println("Insufficient funds.");
